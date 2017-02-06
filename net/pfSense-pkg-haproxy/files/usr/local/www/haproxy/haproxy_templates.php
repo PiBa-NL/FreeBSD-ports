@@ -227,22 +227,22 @@ haproxy_display_top_tabs_active($haproxy_tab_array['haproxy'], "templates");
 			<h2 class="panel-title"><?=gettext("Templates")?></h2>
 		</div>
 		<div class="table-responsive panel-body">
-			This page contains some templates that can be added into the haproxy configuration to possible ways to configure haproxy using this the webgui from this package.
+			This page contains some templates that can be added into the haproxy configuration.
 		</div>
 		<br/>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h2 class="panel-title"><?=gettext("Serving multiple domains from 1 frontend")?></h2>
+			<h2 class="panel-title"><?=gettext("Serving multiple domains from a single frontend")?></h2>
 		</div>
 		<div class="table-responsive panel-body">
 			<div class="col-sm-3">
 				<br/><?=new Form_Button('createexample_mutipledomain','Create configuration');?>
 			</div>
 			<div class="col-sm-8">
-				As an basic example of how to serve multiple domains on 1 listening ip:port.
-				No actual backend servers are used in the example, in the created example only stats pages are enabled on each backend.
-				So to make it 'functional' for a real scenario some servers should be added and stats move to a different 'Stats Uri' or disabled.
+				A basic example of serving multiple domains on one listening ip:port.
+				No actual backend servers are used in the created example; only stats pages are enabled on each backend.
+				To make it 'functional' for a real use scenario, some servers should be added and stats moved to a different 'Stats Uri' or disabled.
 			</div>
 		</div>
 		<br/>
@@ -256,10 +256,10 @@ haproxy_display_top_tabs_active($haproxy_tab_array['haproxy'], "templates");
 				<br/><?=new Form_Button('createexample_ssl','Create configuration');?>
 			</div>
 			<div class="col-sm-8">
-				As an basic example you can use the link below to create a 'stats' frontend/backend page which offers with more options like setting user/password and 'admin mode' when you go to the backend settings.<br/>
-				TEMPLATE: Create stats example configuration using a frontend/backend combination with ssl<br/>
+				You can use the link below to create a 'stats' frontend/backend page which offers more options, like setting username/password and 'admin mode' when you go to the backend settings.<br/>
+				TEMPLATE: Create stats example configuration using a frontend/backend combination with SSL.<br/>
 				<br/>
-				After applying the changes made by the template use this link to visit the stats page: <a target="_blank" href="https://<?=get_interface_ip("lan");?>:444">https://pfSense-LAN-ip:444/</a>
+				After applying the changes made by the template, use this link to visit the stats page: <a target="_blank" href="https://<?=get_interface_ip("lan");?>:444">https://pfSense-LAN-ip:444/</a>
 			</div>
 		</div>	
 		<br/>
@@ -273,7 +273,7 @@ haproxy_display_top_tabs_active($haproxy_tab_array['haproxy'], "templates");
 				<?=new Form_Button('createexample_errorfile','Create configuration');?>
 			</div>
 			<div class="col-sm-8">
-				As an basic example of an errorfile with name 'ExampleErrorfile' will be added if it does not exist.
+				A an basic example of an errorfile named 'ExampleErrorfile' will be added (if it does not exist yet).
 				This file can then be used in the 'Error files' in the backend settings.
 			</div>
 		</div>
