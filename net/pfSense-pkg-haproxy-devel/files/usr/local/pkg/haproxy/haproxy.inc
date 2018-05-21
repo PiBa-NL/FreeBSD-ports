@@ -680,9 +680,6 @@ function write_backend($configpath, $fd, $name, $pool, $backendsettings) {
 	$a_mailers = &$config['installedpackages']['haproxy']['email_mailers']['item'];
 	$a_resolvers = $config['installedpackages']['haproxy']['dns_resolvers']['item'];
 
-	if (!is_array($pool['ha_servers']['item']) && !$pool['stats_enabled']=='yes') {
-		return;
-	}
 	global $a_checktypes, $a_cookiemode, $a_files_cache, $a_error;
 	
 	$server_options = "";
