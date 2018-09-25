@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pfSense-pkg-haproxy
-PORTVERSION=	0.59
-PORTREVISION=	11
+PORTVERSION=	0.60
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +12,7 @@ COMMENT=	pfSense package haproxy
 
 LICENSE=	APACHE20
 
-RUN_DEPENDS=	${LOCALBASE}/sbin/haproxy:net/haproxy
+RUN_DEPENDS=	${LOCALBASE}/sbin/haproxy:net/haproxy17
 
 CONFLICTS=	pfSense-pkg-haproxy-devel-[0-9]*
 
